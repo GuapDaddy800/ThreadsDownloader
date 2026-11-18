@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Threads Downloader",
+  "version": "1.6.0",
+  "description": "Download photos and videos directly from Threads posts.",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": [
+    "https://www.threads.com/*",
+    "https://www.threads.net/*",
+    "https://*.cdninstagram.com/*",
+    "https://*.fbcdn.net/*",
+    "https://*.instagram.com/*"
+  ],
+  "content_scripts": [{
+    "matches": ["https://www.threads.com/*", "https://www.threads.net/*"],
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "Threads Downloader — Settings", "default_popup": "popup.html"},
+  "icons": {"16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png"}
+}
