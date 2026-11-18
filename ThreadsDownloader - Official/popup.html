@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Threads Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header class="header">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 17v2h14v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="heading">
+        <h1>Threads Downloader</h1>
+        <span class="version">Version 1.6.0</span>
+      </div>
+    </header>
+    <p class="intro">Save photos and videos straight from Threads posts.</p>
+
+    <section class="panel" aria-label="Download settings">
+      <div class="setting">
+        <div><label for="enabled" class="setting-name">Download buttons</label><p class="hint">Show a download button on posts with media.</p></div>
+        <input class="toggle" id="enabled" type="checkbox" checked aria-label="Show download buttons">
+      </div>
+      <div class="rule"></div>
+      <div class="setting">
+        <div><label for="askWhere" class="setting-name">Choose save location</label><p class="hint">Ask where to save each downloaded file.</p></div>
+        <input class="toggle" id="askWhere" type="checkbox" checked aria-label="Choose where to save each file">
+      </div>
+    </section>
+
+    <section class="folder-section" aria-labelledby="folder-title">
+      <label class="setting-name" id="folder-title" for="folder">Downloads subfolder</label>
+      <p class="hint">Used when “Choose save location” is off.</p>
+      <input id="folder" type="text" maxlength="100" placeholder="ThreadsDownloader" autocomplete="off" spellcheck="false">
+      <p id="folder-note" class="hint">Files are saved inside your browser's Downloads folder.</p>
+    </section>
+    <p class="notice"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 17v-5m0-4h.01M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Multi-image posts download each file separately. Videos save in their available video format.</span></p>
+    <footer><span>Made for Chrome &amp; Vivaldi</span><span id="status" role="status" aria-live="polite"></span></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
