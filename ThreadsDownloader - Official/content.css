@@ -1,6 +1,0 @@
-.threads-dl-action { display: inline-flex !important; align-items:center; justify-content:center; width:34px; height:34px; padding:5px; margin:0 2px; cursor:pointer; border:0; border-radius:999px; background:transparent; color:inherit; vertical-align:middle; flex:none; }
-.threads-dl-action:hover { background:rgba(128,128,128,.15); }
-.threads-dl-action:focus-visible { outline:2px solid #5498f8; outline-offset:2px; }
-.threads-dl-action svg { width:21px; height:21px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
-.threads-dl-action[disabled] { opacity:.55; cursor:wait; }
-.threads-dl-toast { position:fixed; bottom:24px; right:24px; max-width:340px; background:#242424; color:white; z-index:2147483647; border-radius:10px; padding:12px 16px; font:13px system-ui,sans-serif; box-shadow:0 4px 20px #0005; pointer-events:none; }
